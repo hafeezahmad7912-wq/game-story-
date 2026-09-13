@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameStory - Game Stories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            🎮 Game<span>Story</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#add">Add Story</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO GAMESTORY</p>
+
+            <h1>
+                Discover The Story
+                <br>
+                Behind Your Favorite Games
+            </h1>
+
+            <p class="hero-text">
+                Search your favorite game and read its complete story,
+                characters, missions and important events.
+            </p>
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search game name..."
+                    autocomplete="off"
+                >
+
+                <button onclick="searchGames()">
+                    🔍 Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAMES -->
+    <section class="games-section" id="games">
+
+        <div class="section-title">
+
+            <p>GAME LIBRARY</p>
+
+            <h2>Popular Stories</h2>
+
+        </div>
+
+
+        <div id="gamesContainer" class="games-container">
+
+            <!-- Games JavaScript se yahan appear hongi -->
+
+        </div>
+
+
+        <div id="noGames" class="no-games">
+
+            <h3>Game Not Found</h3>
+
+            <p>
+                Is naam ki koi game story available nahi hai.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADD STORY -->
+    <section class="add-section" id="add">
+
+        <div class="add-box">
+
+            <div class="section-title">
+
+                <p>YOUR GAME LIBRARY</p>
+
+                <h2>Add A New Game Story</h2>
+
+            </div>
+
+
+            <label>Game Name</label>
+
+            <input
+                type="text"
+                id="gameName"
+                placeholder="Example: GTA V"
+            >
+
+
+            <label>Game Image URL</label>
+
+            <input
+                type="text"
+                id="gameImage"
+                placeholder="Paste image URL (optional)"
+            >
+
+
+            <label>Game Story</label>
+
+            <textarea
+                id="gameStory"
+                placeholder="Paste the complete game story here..."
+            ></textarea>
+
+
+            <button class="add-button" onclick="addGame()">
+                ➕ Add Game Story
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY MODAL -->
+    <div id="storyModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeStory()">
+                ✕
+            </button>
+
+            <img
+                id="modalImage"
+                class="modal-image"
+                src=""
+                alt="Game Cover"
+            >
+
+            <div class="modal-body">
+
+                <p class="story-label">
+                    GAME STORY
+                </p>
+
+                <h2 id="modalTitle">
+                    Game Name
+                </h2>
+
+                <div id="modalStory" class="story-text">
+                    Story
+                </div>
+
+                <div class="modal-actions">
+
+                    <button onclick="editCurrentGame()">
+                        ✏️ Edit Story
+                    </button>
+
+                    <button
+                        class="delete-btn"
+                        onclick="deleteCurrentGame()"
+                    >
+                        🗑️ Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🎮 GameStory
+        </div>
+
+        <p>
+            Your personal game story library.
+        </p>
+
+        <p class="copyright">
+            © 2026 GameStory
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
